@@ -40,6 +40,14 @@ public class Menu : MonoBehaviour
 #endif
     }
 
+    public void ResetHighScore()
+    {
+        //reset the high score and name
+        DataStore.Instance.highScore = 0;
+        DataStore.Instance.playerName = "";
+        DataStore.Instance.SaveHighScore();
+    }
+
 
 
 }

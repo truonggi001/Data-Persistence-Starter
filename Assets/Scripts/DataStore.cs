@@ -39,6 +39,13 @@ public class DataStore : MonoBehaviour
         File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
     }
 
+    public void ResetHighScore()
+    {
+        highScore = 0;
+        playerName = "";
+        SaveHighScore();
+    }
+
     public void LoadHighScore()
     {
         string path = Application.persistentDataPath + "/savefile.json";

@@ -10,6 +10,7 @@ public class PlayerNameHandler : MonoBehaviour
         if (DataStore.Instance != null)
         {
             DataStore.Instance.playerName = nameInputField.text;
+            DataStore.Instance.SaveHighScore();
             Debug.Log("Player Name Set: " + DataStore.Instance.playerName);
         }
         else
